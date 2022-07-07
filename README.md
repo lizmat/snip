@@ -3,24 +3,24 @@
 NAME
 ====
 
-span - Provide Haskell's span functionality
+snip - Provide functionality similar to Haskell's span
 
 SYNOPSIS
 ========
 
 ```raku
-use span;
+use snip;
 
-.say for span * < 10, 2, 2, 2, 5, 5, 7, 13, 9, 6, 2, 20, 4;
+.say for snip * < 10, 2, 2, 2, 5, 5, 7, 13, 9, 6, 2, 20, 4;
 # (2 2 2 5 5 7)
 # (13 9 6 2 20 4)
 
-.say for span (* < 10, * < 20), 2, 2, 2, 5, 5, 7, 13, 9, 6, 2, 20, 4;
+.say for snip (* < 10, * < 20), 2, 2, 2, 5, 5, 7, 13, 9, 6, 2, 20, 4;
 # (2 2 2 5 5 7)
 # (13 9 6 2)
 # (20 4)
 
-.say for span Int, 2, 2, 2, 5, 5, "a", "b", "c";
+.say for snip Int, 2, 2, 2, 5, 5, "a", "b", "c";
 # (2 2 2 5 5)
 # (a b c)
 ```
@@ -28,16 +28,16 @@ use span;
 DESCRIPTION
 ===========
 
-The `span` distribution exports a single subroutine `span` that mimics the functionality provided by [Haskell's span functionality](https://hackage.haskell.org/package/base-4.16.1.0/docs/Prelude.html#v:span). But only if the core does not supply a `span` subroutine already (which it may at some point in the future).
+The `snip` distribution exports a single subroutine `snip` that mimics the functionality provided by [Haskell's span functionality](https://hackage.haskell.org/package/base-4.16.1.0/docs/Prelude.html#v:snip). But only if the core does not supply a `snip` subroutine already (which it may at some point in the future).
 
-The `span` subroutine takes a matcher much like `grep` does, which can be a `Callable` or any other object that can have the `ACCEPTS` method called on it.
+The `snip` subroutine takes a matcher much like `grep` does, which can be a `Callable` or any other object that can have the `ACCEPTS` method called on it. Different from the Haskell's `span` implementation, `snip` can take multiple matchers to snip the origin list in more than 2 parts.
 
 AUTHOR
 ======
 
 Elizabeth Mattijsen <liz@raku.rocks>
 
-Source can be located at: https://github.com/lizmat/span . Comments and Pull Requests are welcome.
+Source can be located at: https://github.com/lizmat/snip . Comments and Pull Requests are welcome.
 
 If you like this module, or what I’m doing more generally, committing to a [small sponsorship](https://github.com/sponsors/lizmat/) would mean a great deal to me!
 

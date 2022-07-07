@@ -1,18 +1,18 @@
 use Test;
-use span;
+use snip;
 
 plan 3;
 
-is-deeply span(* < 10, 2, 2, 2, 5, 5, 7, 13, 9, 6, 2, 20, 4),
+is-deeply snip(* < 10, 2, 2, 2, 5, 5, 7, 13, 9, 6, 2, 20, 4),
   ((2,2,2,5,5,7), (13,9,6,2,20,4)),
-  'span with a single Callable';
+  'snip with a single Callable';
 
-is-deeply span( (* < 10, * < 20), 2, 2, 2, 5, 5, 7, 13, 9, 6, 2, 20, 4),
+is-deeply snip( (* < 10, * < 20), 2, 2, 2, 5, 5, 7, 13, 9, 6, 2, 20, 4),
   ((2,2,2,5,5,7),(13,9,6,2),(20,4)),
-  'span with two Callables';
+  'snip with two Callables';
 
-is-deeply span( Int, 2, 2, 2, 5, 5, "a", "b", "c"),
+is-deeply snip( Int, 2, 2, 2, 5, 5, "a", "b", "c"),
   ((2,2,2,5,5),<a b c>),
-  'span with a type object';
+  'snip with a type object';
 
 # vim: expandtab shiftwidth=4

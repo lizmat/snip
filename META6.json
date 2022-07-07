@@ -7,18 +7,18 @@
   ],
   "depends": [
   ],
-  "description": "Provide Haskell's span functionality",
+  "description": "Provide functionality similar to Haskell's span",
   "license": "Artistic-2.0",
-  "name": "span",
+  "name": "snip",
   "perl": "6.d",
   "provides": {
-    "span": "lib/span.rakumod"
+    "snip": "lib/snip.rakumod"
   },
   "resources": [
   ],
-  "source-url": "https://github.com/lizmat/span.git",
+  "source-url": "https://github.com/lizmat/spin.git",
   "tags": [
-    "SPAN"
+    "SPAN", "SNIP"
   ],
   "test-depends": [
   ],
