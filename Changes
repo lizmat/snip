@@ -1,7 +1,9 @@
 Revision history for snip
 
 {{$NEXT}}
+    - Fixed repository references
+    - Added support for CI badge for each OS
+    - Updated copyright year
 
 0.0.1  2022-07-07T13:23:07+02:00
-
     - Initial version, cat-licensed from the "snap" distribution
