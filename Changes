@@ -1,6 +1,8 @@
 Revision history for snip
 
 {{$NEXT}}
+
+0.0.2  2024-11-28T19:06:37+01:00
     - Fixed repository references
     - Added support for CI badge for each OS
     - Updated copyright year
